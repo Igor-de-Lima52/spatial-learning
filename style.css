@@ -1,0 +1,374 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+:root{
+    font-size: 62.5%;
+    --white-color: #FFF;
+    --pink-color: #B52184;
+    --blue-color-500: #343193;
+    --blue-color-600: #312D64;
+    --blue-color-700: #302C63;
+    --hover-blue-500: #28256e;
+    --hover-blue-700: #26234e;
+}
+html{
+    scroll-behavior: smooth;
+}
+body{
+    width: 100%;
+    height: 100%;
+    font-size: 1.6rem;
+    font-family: "Mulish", sans-serif;
+}
+.page{
+    width: 100%;
+    height: 100%;
+    overflow-x: hidden;
+}
+.page section:nth-child(1){
+    width: 100%;
+    text-align: center;
+    margin-bottom: 9.2rem;
+}
+.page section:nth-child(1) img{
+    width: 18rem;
+    margin-bottom: 1.8rem;
+}
+.page section h1, main .card h2, section h2{
+    font-size: 3.2rem;
+    font-weight: 800;
+    color: var(--pink-color);
+}
+.page section:nth-child(1) p, main .card p{
+    font-size: 2rem;
+    font-weight: 500;
+    color: var(--blue-color-600);
+}
+.page section:nth-child(1) button{
+    width: 5.8rem;
+    height: 10.4rem;
+    background: var(--white-color);
+    border: .4rem solid var(--pink-color);
+    border-radius: 3rem;
+    margin-top: 3.4rem;
+}
+.page section:nth-child(1) button a{
+    width: 100%;
+    height: 100%;
+}
+.page section:nth-child(1) button .arrow{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.page section:nth-child(1) button .arrow .rect{
+    width: .4rem;
+    height: 6rem;
+    background: var(--pink-color);
+}
+.square{
+    width: 2.4rem;
+    height: 2.4rem;
+    position: absolute;
+    bottom: .2rem;
+    border-right: .4rem solid var(--pink-color);
+    border-bottom: .4rem solid var(--pink-color);
+    transform: rotate(45deg);
+}
+main{
+    padding: 5.2rem 3.8rem;
+    background: linear-gradient(0.1turn, var(--blue-color-500), var(--blue-color-700));;
+}
+main .card{
+    background: var(--white-color);
+    padding: 2.6rem;
+    border-radius: 2rem;
+}
+main .card + .card{
+    margin-top: 5rem;
+}
+main .card h2{
+    font-size: 3rem;
+    margin: 3.2rem 0 2rem;
+}
+main .card p{
+    font-size: 1.6rem;
+    max-width: 27rem;
+}
+form{
+    margin: 7.8rem auto 6.4rem;
+    width: 32rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 2.4rem;
+}
+form input, form textarea{
+    font-family: "Mulish", sans-serif;
+    width: 100%;
+    font-size: 1.6rem;
+    font-weight: 500;
+    color: var(--blue-color-600);  
+    border: 2px solid var(--blue-color-600);
+    border-radius: 1.6rem;
+    padding: 1.6rem;
+}
+.input-container {
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+.input-container .input-icon {
+    position: absolute;
+    left: 1.4rem;
+    width: 2.4rem;
+    height: 2.4rem;
+    pointer-events: none;
+}
+form input{
+    padding-left: 4.2rem;
+    height: 4.8rem;
+}
+form textarea{
+    height: 12rem;
+}
+form input::placeholder, textarea::placeholder{
+    font-size: 1.6rem;
+    font-weight: 500;
+    color: var(--blue-color-600);
+}
+form button{
+    font-family: "Mulish", sans-serif;
+    font-weight: 600;
+    font-size: 1.4rem;
+    padding: 1rem 1.6rem;
+    width: 15rem;
+    height: 4.4rem;
+    color: var(--white-color);
+    background: linear-gradient(0.1turn, var(--blue-color-500), var(--blue-color-700));
+    border: none;
+    border-radius: 1.6rem;
+}
+footer{
+    width: 100%;
+    height: 8rem;
+    color: var(--white-color);
+    font-size: 2rem;
+    font-weight: 500;
+    background: linear-gradient(0.1turn, var(--blue-color-500), var(--blue-color-700));
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+button:hover{
+    cursor: pointer;
+}
+.page section:nth-child(1) button:hover{
+    /* background: var(--pink-color); */
+    animation: button-header .4s forwards;
+}
+.page section:nth-child(1) button:hover .arrow .rect{
+    /* background: var(--white-color); */
+    animation: rect .4s forwards;
+}
+.page section:nth-child(1) button:hover .arrow .square{
+    /* border-right: .4rem solid var(--white-color);
+    border-bottom: .4rem solid var(--white-color); */
+    animation: square .4s forwards;
+}
+.form button:hover{
+    background: linear-gradient(0.1turn, var(--hover-blue-500), var(--hover-blue-700));
+}
+@keyframes rect {
+    to{
+        background: var(--white-color);
+    }
+}
+@keyframes square {
+    to{
+        border-right: .4rem solid var(--white-color);
+        border-bottom: .4rem solid var(--white-color);
+    }
+}
+@keyframes button-header {
+    to{
+        background: var(--pink-color);
+    }
+}
+.header{
+    --start-Y: -200%;
+    animation: movey 1s forwards;
+}
+.page section:nth-child(1) img{
+    --start-Y: -200%;
+    animation: movey 1s forwards;
+}
+.page main .card{
+    --start-X: 100%;
+    animation: movex 1s forwards;
+}
+form{
+    --start-X: -100%;
+    animation: movex 1s forwards;
+}
+@keyframes movey{
+    from{
+        transform: translateY(var(--start-Y));
+    }
+}
+@keyframes movex{
+    from{
+        transform: translateX(var(--start-X));
+    }
+}
+@media(min-width: 500px){
+    .page section:nth-child(1) img{
+        width: 32rem;
+    }
+    main .card p{
+        width: 100%;
+        max-width: none;
+    }
+    form{
+        width: 40rem;
+    }
+}
+@media(min-width: 650px){
+    .page section:nth-child(1) img{
+        width: 40rem;
+    }
+    form{
+        width: 60rem;
+    }
+    .page main .card:nth-child(1){
+        --start-X: 300%;
+        animation: movex 1.5s forwards;
+    }
+    .page main .card:nth-child(2){
+        --start-X: 300%;
+        animation: movex 2s forwards;
+    }
+    .page main .card:nth-child(3){
+        --start-X: 300%;
+        animation: movex 2.5s forwards;
+    }
+}
+@media(min-width: 1280px){
+    .page section:nth-child(1){
+        display: flex;
+        flex-direction: row-reverse;
+        justify-content: space-between;
+    }
+    .page section:nth-child(1) img{
+        width: 42rem;
+        margin-right: 3rem;
+        margin-bottom: 0;
+    }
+    .page section .header{
+        position: relative;
+        margin: 14rem 0 0 10rem;
+    }
+    .page section h1, main .card h2, section h2{
+        font-size: 5.8rem;
+    }
+    .page section:nth-child(1) p{
+        margin-bottom: 18rem; 
+    }
+    .page section:nth-child(1) p, main .card p{
+        font-size: 3.2rem;
+    }
+    .page section:nth-child(1) button{
+        position: absolute;
+        bottom: 0;
+        left: 0;
+    }
+    main{
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        gap: 6rem;
+        padding: 6.4rem 8rem;
+    }
+    main .card{
+        width: 100%;
+        height: 42rem;
+        background: var(--white-color);
+        padding: 2.6rem;
+        border-radius: 2.4rem;
+    }
+    main .card h2{
+        font-size: 3.4rem;
+        margin: 4rem 0 2.4rem;
+    }
+    main .card p{
+        font-size: 1.8rem;
+        max-width: 32rem;
+    }
+    main .card + .card{
+        margin: 0;
+    }
+    .form{
+        display: flex;
+        justify-content: space-between;
+    }
+    .stars{
+        width: 60rem;
+        height: 60rem;
+        background: url("./assets/Stars.svg");
+        background-repeat: no-repeat;
+        background-position: bottom right;
+    }
+    form{
+        margin: 0 0 0 8rem;
+        width: 54rem;
+        gap: 2.4rem;
+    }
+    .header{
+        --start-Y: -100%;
+        animation: movey .8s forwards;
+    }
+    .page section:nth-child(1) img{
+        --start-Y: -100%;
+        animation: movey .8s forwards;
+    }
+    .page main .card{
+        --start-X: 300%;
+        animation: movex 1.5s forwards;
+    }
+    .stars{
+        --start-X: 200%;
+        animation: movex 1s forwards;
+    }
+}
+@media(min-width: 1440px){
+    .page section:nth-child(1){
+        gap: 6rem;
+        justify-content: none;
+    }
+    .page section:nth-child(1) img{
+        width: 72rem;
+        height: 72rem;
+    }
+    .page section .header{
+        margin: 30rem 0 0 10rem;
+    }
+    main{
+        padding: 6.4rem 11rem;
+    }
+    main .card{
+        height: 44rem;
+    }
+    main .card p{
+        font-size: 2rem;
+    }
+    .stars{
+        width: 64rem;
+        height: 60rem;
+    }
+    form{
+        width: 60rem;
+    }
+}
