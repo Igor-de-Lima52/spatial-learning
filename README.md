@@ -1,11 +1,11 @@
 
 # Página de Aprendizado Espacial
 
-Esse projeto foi feito para uma página de aprendizado sobre o espaço, universo, etc.
+Esse projeto foi feito para uma página de aprendizado com tema espacial.
 
 
 
 ## Screenshots
-![App Screenshot](https://i.imgur.com/uzcoszK.png)
-![App Screenshot](https://i.imgur.com/u1mlj4o.png)
-![App Screenshot](https://i.imgur.com/LYNk1Hd.png)
+![App Screenshot](https://i.imgur.com/tij7MvZ.png)
+![App Screenshot](https://i.imgur.com/2OK03AP.png)
+![App Screenshot](https://i.imgur.com/Y29fiRO.png)
