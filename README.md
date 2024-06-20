@@ -1,5 +1,5 @@
 
-# Página de Mentoria
+# Página de Aprendizado Espacial
 
 Esse projeto foi feito para uma página de aprendizado sobre o espaço, universo, etc.
 
